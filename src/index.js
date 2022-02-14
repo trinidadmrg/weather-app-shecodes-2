@@ -9,7 +9,7 @@ function App() {
       <h1>Weather App</h1>
       <WeatherApp />
       <p className="signature">
-        Link to GitHub https://github.com/trinidadmrg/weather-app-shecodes-2
+        Link to GitHub <a href="https://github.com/trinidadmrg/weather-app-shecodes-2">https://github.com/trinidadmrg/weather-app-shecodes-2</a> 
       </p>
     </div>
   );

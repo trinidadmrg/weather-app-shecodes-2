@@ -29,17 +29,19 @@ export default function WeatherApp() {
   }
 
   let form = (
-    <form onSubmit={handleSubmit}>
-      <input
-        className="input"
-        type="search"
-        placeholder="Enter a city.."
-        onChange={updateCity}
-      />
-      <button className="sendButton" type="Submit">
-        Search
-      </button>
-    </form>
+    <div className="formContainer">
+      <form onSubmit={handleSubmit}>
+        <input
+          className="input"
+          type="search"
+          placeholder="Enter a city.."
+          onChange={updateCity}
+        />
+        <button className="sendButton" type="Submit">
+          Search
+        </button>
+      </form>
+    </div>
   );
 
   if (loaded) {

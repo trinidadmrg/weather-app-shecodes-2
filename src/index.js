@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <h1>Weather App</h1>
       <WeatherApp />
-      <p>Link to GitHub https://github.com/trinidadmrg/weather-app-shecodes</p>
+      <p className="signature">
+        Link to GitHub https://github.com/trinidadmrg/weather-app-shecodes-2
+      </p>
     </div>
   );
 }

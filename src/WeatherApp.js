@@ -1,5 +1,37 @@
 import React, { useState } from "react";
 import axios from "axios";
+import WeatherTemperature from "./WeatherTemperature";
+
+let now = new Date();
+let currentDay = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let currentMonth = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+let day = currentDay[now.getDay()];
+let date = now.getDate();
+let month = currentMonth[now.getMonth()];
+let year = now.getFullYear();
 
 export default function WeatherApp() {
   const [city, setCity] = useState("");
@@ -9,6 +41,7 @@ export default function WeatherApp() {
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
+      name: response.data.name,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -48,15 +81,27 @@ export default function WeatherApp() {
     return (
       <div>
         {form}
-        <ul>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Description: {weather.description}</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
+        <div className="results-container">
+          <div className="time-and-zone">
+            <h2 className="weather-name">{weather.name}</h2>
+            <h3>
+              {day}. {date}th {month}. {year}.
+            </h3>
+            <WeatherTemperature celsius={weather.temperature} />
+          </div>
+          <ul className="results">
+            <li>Humidity: {weather.humidity}%</li>
+            <li>Wind: {weather.wind}km/h</li>
+          </ul>
+          <div className="description-container">
+            <img
+              className="weather-img"
+              src={weather.icon}
+              alt={weather.description}
+            />
+            <p className="weather-desc">{weather.description}</p>
+          </div>
+        </div>
       </div>
     );
   } else {

@@ -3,7 +3,8 @@
 }
 
 html {
-  background-color: #ffdfdf;
+  background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/10/23/57871/purple-sky-01.jpg);
+  height: 100%;
 }
 
 .App {
@@ -12,15 +13,19 @@ html {
   box-shadow: 0px 4px 10px grey;
   display: block;
   width: 70%;
+  height: 100%;
   margin: 0 auto;
   padding: 30px;
 }
 
 h1 {
   font-family: "Rowdies", cursive;
-  color: #635d5a;
   text-align: center;
-  font-size: 45px;
+  font-size: 40px;
+  background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/10/23/57871/purple-sky-01.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .formContainer {
@@ -47,17 +52,86 @@ h1 {
   margin: 10px;
   height: 25px;
   width: 100px;
-  background-color: #fdcebb;
+  background-color: #a100e6;
   color: white;
   font-size: 15px;
 }
 
 .sendButton:hover {
   background-color: white;
-  color: #fdcebb;
+  color: #a100e6;
 }
 
 .signature {
   text-align: center;
   font-size: 15px;
+}
+
+.root {
+  height: 90vh;
+}
+
+.results-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/10/23/57871/purple-sky-01.jpg);
+  border-radius: 30px;
+  color: white;
+  padding: 40px;
+  align-items: center;
+}
+
+.weather-name {
+  font-size: 60px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+  font-size: 30px;
+}
+
+.weather-desc {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.weather-img {
+  margin: 0px;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-and-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.weather-temp {
+  font-size: 90px;
+  margin: 0px;
+}
+
+.temp-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.units {
+  font-size: 25px;
+  margin: 0px;
 }
